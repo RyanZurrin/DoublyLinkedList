@@ -4,7 +4,7 @@
 
 struct Node
 {
-	int key = -1;
+	int key;
 	Data d;
 	Node* next;
 	Node* prev;
