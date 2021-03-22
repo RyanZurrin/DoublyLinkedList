@@ -22,6 +22,15 @@ inline DoublyLinkedList::DoublyLinkedList(int maxSize)
 	tail = NULL;
 }
 
+inline DoublyLinkedList::DoublyLinkedList(const DoublyLinkedList& dll)
+{
+	qty = dll.qty;
+	max = dll.max;
+	head = dll.head;
+	tail = dll.tail;
+
+}
+
 inline bool DoublyLinkedList::addItem(int val, Data& _d)
 {
 	Node* temp;

@@ -5,6 +5,7 @@ class DoublyLinkedList
 public:
 	DoublyLinkedList();
 	DoublyLinkedList(int maxSize);
+	DoublyLinkedList(const DoublyLinkedList& dll);
 	bool addItem(int val, Data& _d);
 	bool deleteItem(int val, Data& _d);
 	bool findItem(int val, Data& _d);

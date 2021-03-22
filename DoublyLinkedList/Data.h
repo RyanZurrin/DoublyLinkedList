@@ -5,8 +5,8 @@
 
 inline Data::Data()
 {
-	name = "John/Jane doe";
-	dob = "1/1/1900";
+	name = "";
+	dob = "";
 	balance = 00.00;
 }
 
