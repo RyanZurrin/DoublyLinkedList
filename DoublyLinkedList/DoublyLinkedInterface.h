@@ -1,28 +1,27 @@
 #pragma once
 #include "Node.h"
+#include <iostream>
 class DoublyLinkedList
 {
 public:
 	DoublyLinkedList();
 	DoublyLinkedList(int maxSize);
-	DoublyLinkedList(const DoublyLinkedList& dll);
-	bool addItem(int val, Data& _d);
-	bool deleteItem(int val, Data& _d);
-	bool findItem(int val, Data& _d);
+	bool addItem(int val, data& _d);
+	bool deleteItem(int val);
+	bool findItem(int val, data& _d);
 	bool isEmpty()const;
 	bool isFull()const;
 	int getQty()const;
 	bool makeEmpty();
-	void printList();
-	void printReverse();
+	void displayKeys()const;
+	void displayAll(std::ostream&);
 	~DoublyLinkedList();
 
 
 private:
 	int qty;
 	int max;
-	Node* head;
-	Node* tail;
-
+	node* head;
+	node* curr;
 };
 

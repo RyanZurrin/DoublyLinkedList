@@ -2,11 +2,11 @@
 #include "Data.h"
 
 
-struct Node
+struct node
 {
 	int key;
-	Data d;
-	Node* next;
-	Node* prev;
+	data d;
+	node* next;
+	node* prev;
 };
 
