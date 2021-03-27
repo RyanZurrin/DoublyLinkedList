@@ -2,57 +2,45 @@
 #pragma once
 
 #include "DataInterface.h"
+#include <iostream>
+#include <string>
 
-inline Data::Data()
+inline data::data()
 {
-	name = "";
-	dob = "";
-	balance = 00.00;
+	toolname;
+	quantity = 0;
+	cost = 00.00;
 }
 
-inline Data::Data(std::string n, std::string bd, double b)
+inline data::data(std::string tn, int qty, double _cost)
 {
-	name = n;
-	dob  = bd;
-	balance = b;
+	int len = tn.length();
+	tn.copy (toolname, tn.size()+1);
+	quantity  = qty;
+	cost = _cost;
 }
 
-inline std::string Data::getName() const
+inline std::string data::getToolName() const
 {
-	return name;
+	return toolname;
 }
 
-inline std::string Data::getDOB() const
+inline int data::getQuantity() const
 {
-	return dob;
+	return quantity;
 }
 
-inline double Data::getBalance() const
+inline double data::getCost() const
 {
-	return balance;
+	return cost;
 }
 
-inline void Data::setName(const std::string n)
+inline void data::displayData()
 {
-	name = n;
-}
-
-inline void Data::setDOB(const std::string bd)
-{
-	dob = bd;
-}
-
-inline void Data::setBalance(const double b)
-{
-	balance = b;
-}
-
-inline void Data::displayData()
-{
-	printf("\nname: %s \nDOB: %s \nBalance: %.2f\n",
-		name.c_str(),
-		dob.c_str(),
-		balance);
+	printf("\ntool name: %s \nqty: %d \nBalance: %.2f\n",
+		toolname,
+		quantity,
+		cost);
 }
 
 

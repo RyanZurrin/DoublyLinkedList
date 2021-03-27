@@ -3,22 +3,18 @@
 #pragma once
 #include <string>
 
-class Data
+struct  data
 {
 public:
-	Data();
-	Data(std::string n, std::string bd, double b);
-	std::string getName()const;
-	std::string getDOB()const;
-	double getBalance()const;
-	void setName(const std::string n);
-	void setDOB(const std::string bd);
-	void setBalance(const double b);
+	char toolname[35];
+	int quantity;
+	double cost;
+	data();
+	data(std::string tn, int qty, double _cost);
+	std::string getToolName()const;
+	int getQuantity()const;
+	double getCost()const;
 	void displayData();
 
-private:
-	std::string name;
-	std::string dob;
-	double balance;
 
 };
